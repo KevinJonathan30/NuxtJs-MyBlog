@@ -5,7 +5,7 @@
     aria-label="main navigation"
   >
     <div class="navbar-brand">
-      <strong id="brand" class="navbar-item">Make It Blink</strong>
+      <strong id="brand" class="navbar-item">MAKE IT BLINK</strong>
 
       <a
         role="button"
@@ -25,8 +25,8 @@
     <div id="navbarBasic" class="navbar-menu has-background-dark" :class="{ 'is-active': showNav }">
       <div class="navbar-start">
         <nuxt-link class="navbar-item has-text-light" to="/">Home</nuxt-link>
-
-        <a class="navbar-item has-text-light" href="#secondary">About Me</a>
+        <nuxt-link class="navbar-item has-text-light" to="/#secondary">About Me</nuxt-link>
+        <nuxt-link class="navbar-item has-text-light" to="/impossible-list">Impossible List</nuxt-link>
       </div>
     </div>
   </nav>
@@ -73,8 +73,7 @@ export default {
   transition: 0.1s linear;
 }
 .navbar-start nuxt-link:hover,
-.navbar-start a:hover,
-.nav-item a.nuxt-link-active {
+.navbar-start a:hover {
   border-top: 0.25rem solid orange;
   text-shadow: 0 0 1rem orange;
   color: orange;

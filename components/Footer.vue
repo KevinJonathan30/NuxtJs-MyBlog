@@ -25,11 +25,11 @@
       </ul>
       <hr />
       <a href="#">
-        <i class="fas fa-angle-up"></i>
+        <i class="fas fa-level-up-alt"></i>
       </a>
       <p
         class="has-text-light"
-      >Copyright &copy; {{ new Date().getFullYear() }} Kevin Jonathan | All rights reserved.</p>
+      >&copy; {{ new Date().getFullYear() }} Kevin Jonathan | All rights reserved.</p>
     </div>
   </footer>
 </template>
@@ -41,7 +41,7 @@ export default {}
 <style scoped>
 a {
   color: white;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
 }
 a:hover {
   color: orange;

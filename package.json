@@ -8,14 +8,12 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
-    "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
-    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.0.0",
-    "@nuxtjs/bulma": "^1.2.1"
+    "@nuxtjs/bulma": "^1.2.1",
+    "animate.css": "^4.0.0",
+    "nuxt": "^2.0.0"
   },
   "devDependencies": {
     "eslint-config-prettier": "^6.10.0",

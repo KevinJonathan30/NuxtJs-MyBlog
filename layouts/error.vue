@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="hero is-dark is-bold is-fullheight" id="error">
+    <section class="hero is-dark is-fullheight" id="error">
       <div class="hero-body">
         <div class="container has-text-centered">
           <h1 id="error404">404</h1>

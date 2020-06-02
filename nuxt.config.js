@@ -24,22 +24,25 @@ export default {
       { rel: 'stylesheet', href: "https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" }
     ],
     script: [
-      { src:'https://use.fontawesome.com/releases/v5.13.0/js/all.js' }
+      { src:'https://use.fontawesome.com/releases/v5.13.0/js/all.js' },
+      { src:'js/wow.js' },
+      { src:'js/function.js' }
     ]
   },
   /*
   ** Customize the progress-bar color
   */
-  loading: {
-    color: 'black',
-    height: '5px'
-  },
-  
+ loading: {
+  color: 'orange',
+  height: '0.25rem',
+  throttle: 0
+},
   /*
   ** Global CSS
   */
   css: [
-    '~/assets/css/style.css'
+    '~/assets/css/style.css',
+    '~/assets/css/animate.compat.css'
   ],
   /*
   ** Plugins to load before mounting the App

@@ -5,7 +5,14 @@
       <div class="hero-body">
         <div class="container has-text-right">
           <h1 class="title">Welcome to my world!</h1>
-          <h2 class="subtitle">Kevin Jonathan's stuffs here.</h2>
+          <h2 class="subtitle wow fadeInUp animated">Kevin Jonathan's stuffs here.</h2>
+        </div>
+      </div>
+      <div class="hero-foot">
+        <div class="container has-text-centered">
+          <a href="#secondary" class="has-text-light" id="#scrollDown">
+            <i class="fas fa-angle-double-down"></i>
+          </a>
         </div>
       </div>
     </section>
@@ -28,7 +35,7 @@
       </div>
     </section>
     <a href="http://kevinjonathan.dx.am">
-      <section class="hero is-light is-bold" id="heroBlog">
+      <section class="hero is-light is-medium is-bold" id="heroBlog">
         <div class="hero-body">
           <div class="container">
             <h1 class="title has-text-centered">My Blog</h1>
@@ -36,17 +43,17 @@
         </div>
       </section>
     </a>
-    <a href="http://kevinjonathan.dx.am/resume">
-      <section class="hero is-dark is-bold" id="heroPortfolio">
+    <nuxt-link to="/portfolio">
+      <section class="hero is-dark is-medium is-bold" id="heroResume">
         <div class="hero-body">
           <div class="container">
-            <h1 class="title has-text-centered">My Resume</h1>
+            <h1 class="title has-text-centered">My Portfolio</h1>
           </div>
         </div>
       </section>
-    </a>
+    </nuxt-link>
     <nuxt-link to="/contact">
-      <section class="hero is-dark is-bold" id="heroContact">
+      <section class="hero is-dark is-medium is-bold" id="heroContact">
         <div class="hero-body">
           <div class="container">
             <h1 class="title has-text-centered">Contact Me</h1>
@@ -65,11 +72,11 @@ export default {
   components: {
     Navigation,
     Footer
-  }
+  },
 }
 </script>
 
-<style>
+<style scoped>
 #header h1 {
   border-right: 0.15em solid orange;
   animation: blink-caret 0.75s step-end infinite;
@@ -82,6 +89,21 @@ export default {
   }
   50% {
     border-color: orange;
+  }
+}
+
+.fa-angle-double-down {
+  animation: fading 0.6s alternate ease-in-out infinite;
+}
+
+@keyframes fading {
+  0% {
+    -webkit-transform: translateY(-0.4rem);
+    opacity: 0.4;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -126,7 +148,6 @@ export default {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
 }
 .columns {
@@ -140,6 +161,7 @@ export default {
 
 #mainColumn-2 {
   background-color: rgba(0, 0, 0, 0.5);
+  border-top: 0.5rem solid orange;
 }
 
 #heroBlog {
@@ -149,9 +171,16 @@ export default {
   transition: 0.3s ease;
 }
 
-#heroPortfolio {
+#heroResume {
   background: url('~assets/images/9d4d07ca7d591bb3cd3d9f4df2624bbf.jpg')
     no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.3s ease;
+}
+
+#heroPortfolio {
+  background: url('~assets/images/304479.jpg') no-repeat;
   background-size: cover;
   background-position: bottom;
   transition: 0.3s ease;
@@ -164,11 +193,13 @@ export default {
   transition: 0.3s ease;
 }
 #heroBlog:hover,
+#heroResume:hover,
 #heroPortfolio:hover,
 #heroContact:hover {
   box-shadow: inset 0px 0px 0px 0.5rem rgba(255, 255, 255, 0.5);
 }
 #heroBlog:hover:after,
+#heroResume:hover:after,
 #heroPortfolio:hover:after,
 #heroContact:hover:after {
   box-shadow: none;
